@@ -7,13 +7,12 @@ class Key:
         if not format: s.no_format()
 
     def no_format(s):
-        s.key = ''
         while True:
+            s.key=''
             for x in range(10): s.key += random.choice(s.karakter)
             if not s.validasi: return
             elif s.validasi_key(): return
-            s.key=''
-        
+
     def validasi_key(s):
         return s.key.count(s.key[0])==5
 
