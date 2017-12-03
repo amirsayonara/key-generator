@@ -8,9 +8,14 @@ class Key:
 
     def no_format(s):
         s.key = ''
-        for x in range(10): s.key += random.choice(s.karakter)
-        if not s.validasi: return s.key
+        while True:
+            for x in range(10): s.key += random.choice(s.karakter)
+            if not s.validasi: return
+            elif s.validasi_key(): return
+            s.key=''
         
+    def validasi_key(s):
+        return s.key.count(s.key[0])==5
 
     def __str__(s):
         return s.key
