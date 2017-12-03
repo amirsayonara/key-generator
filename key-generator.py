@@ -11,7 +11,7 @@ class Key:
     def no_format(s):
         while True:
             s.key=''
-            for x in range(10): s.key += random.choice(s.karakter+s.huruf)
+            for x in range(10): s.key += random.choice(s.angka+s.huruf)
             if not s.validasi: return
             elif s.validasi_key(): return
 
